@@ -5,7 +5,7 @@ import { GLOBAL } from '../../Config/global';
 
 const Sidebar = () => {
     return (
-        <div className="d-inline-flex flex-column">
+        <div className="sidebar">
             <ButtonNav description=""/>
             <ButtonNav description={GLOBAL.SIDEBAR.BUTTON_HOME}/>
             <ButtonNav description={GLOBAL.SIDEBAR.BUTTON_EXPLORE}/>

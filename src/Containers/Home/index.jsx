@@ -1,10 +1,22 @@
 import React from 'react'
-import { SearchBar, Suggestions, Trends } from '../../Components'
+import { SearchBar, Suggestions, Trends, Sidebar } from '../../Components'
 
 const Home = () => {
     return (
-        <h1>H O M E</h1>
+        <>
+            <nav>
+                <Sidebar />
+            </nav>
+            <section>
+
+            </section>
+            <aside>
+                <footer>
+
+                </footer>
+            </aside>
+        </>
     )
 }
-    
+
 export default Home

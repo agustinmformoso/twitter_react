@@ -1,23 +1,10 @@
 import React from 'react'
-import { Container, Col, Row } from 'react-bootstrap/'
-import {Sidebar} from '../../Components'
+import { SearchBar, Suggestions, Trends } from '../../Components'
 
 const Home = () => {
     return (
-        <Container fluid={true}>
-            <Row>
-                <Col md={4}>
-                    <Sidebar />
-                </Col>
-                <Col md={4}>
-                
-                </Col>
-                <Col md={4}>
-                
-                </Col>
-            </Row>
-        </Container>
+        <h1>H O M E</h1>
     )
 }
-
+    
 export default Home

@@ -1,3 +1,5 @@
-import Sidebar from './Sidebar';
+import SearchBar from './SearchBar'
+import Suggestions from './Suggestions'
+import Trends from './Trends'
 
-export { Sidebar }
+export { SearchBar, Suggestions, Trends }

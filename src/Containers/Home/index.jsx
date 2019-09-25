@@ -1,21 +1,9 @@
 import React from 'react'
-import { Container, Col, Row } from 'react-bootstrap/'
+import { SearchBar, Suggestions, Trends } from '../../Components'
 
 const Home = () => {
     return (
-        <Container>
-            <Row>
-                <Col md={4}>
-                
-                </Col>
-                <Col md={4}>
-                
-                </Col>
-                <Col md={4}>
-                
-                </Col>
-            </Row>
-        </Container>
+        
     )
 }
 

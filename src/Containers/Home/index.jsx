@@ -3,8 +3,8 @@ import { SearchBar, Suggestions, Trends } from '../../Components'
 
 const Home = () => {
     return (
-        <h1>H O M E</h1>
+        <Suggestions />
     )
 }
-    
+
 export default Home

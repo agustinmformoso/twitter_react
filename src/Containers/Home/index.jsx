@@ -1,10 +1,21 @@
 import React from 'react'
+import { Container, Col, Row } from 'react-bootstrap/'
 
 const Home = () => {
     return (
-        <div>
-            <h1>T W I T T E R</h1>
-        </div>
+        <Container>
+            <Row>
+                <Col md={4}>
+                
+                </Col>
+                <Col md={4}>
+                
+                </Col>
+                <Col md={4}>
+                
+                </Col>
+            </Row>
+        </Container>
     )
 }
 

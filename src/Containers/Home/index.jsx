@@ -4,7 +4,7 @@ import {Sidebar} from '../../Components'
 
 const Home = () => {
     return (
-        <Container>
+        <Container fluid={true}>
             <Row>
                 <Col md={4}>
                     <Sidebar />

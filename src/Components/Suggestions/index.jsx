@@ -1,24 +1,25 @@
 import React from 'react'
+import { Button } from '..'
 
 const Suggestions = () => {
     return (
         <div className="suggestions">
-            <div className="title">
+            <div className="suggestions__title">
                 <h2>A quién seguir</h2>
             </div>
-            <div className="follow-suggestion">
-                <div className="profile-picture">
+            <div className="suggestions__follow-suggestion">
+                <div className="suggestions__follow-suggestion__profile-picture">
                     <img />
                 </div>
-                <div className="account">
-                    <p>Account Name</p>
-                    <span>@account_name</span>
+                <div className="suggestions__follow-suggestion__account">
+                    <p className="suggestions__follow-suggestion__account__p">Account Name</p>
+                    <span className="suggestions__follow-suggestion__account__span">@account_name</span>
                 </div>
-                <div className="follow">
-                    
+                <div className="suggestions__follow-suggestion__follow">
+                    <Button className="suggestions__follow-suggestion__follow__button" description="Seguir" />
                 </div>
             </div>
-            <div className="show-more">
+            <div className="suggestions__show-more">
                 <a href="#!">Mostrar más</a>
             </div>
         </div>

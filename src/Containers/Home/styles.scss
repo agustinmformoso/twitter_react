@@ -1,0 +1,17 @@
+.home {
+    display: flex;
+    justify-content: center;
+    
+    &__col {
+        width: 33.3%;
+        padding: 0 15px;
+
+        &--left {
+            padding-left: 300px;
+        }
+
+        &--right {
+            padding-right: 300px;
+        }
+    }
+}

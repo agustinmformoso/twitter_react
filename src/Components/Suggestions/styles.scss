@@ -1,0 +1,47 @@
+.suggestions {
+    background-color: #F4F8FB;
+    margin: 20px 0;
+    border-radius: 20px;
+
+    &__title {
+        text-align: center;
+        padding: 5px 0;
+        font-weight: bold;
+    }
+
+    &__follow-suggestion {
+        border-top: 1px solid #d0d6e2;
+        border-bottom: 1px solid #d0d6e2;
+        display: flex;
+        justify-content: center;
+        padding: 5px 0;
+
+        &__account {
+
+            &__p {
+                font-weight: bold;
+            }
+
+            &__span {
+                color: #999999;
+            }
+        }
+
+        &__follow {
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+
+            &__button {
+                padding: 10px;
+                border-radius: 20px;
+                border: 2px solid #1da1f2;
+                background-color: transparent;
+                color: #1da1f2;
+                font-weight: bold;
+                font-size: 1rem;
+            }
+        }
+    }
+    
+}

@@ -5,6 +5,7 @@ import { GLOBAL } from '../../Config/global';
 const Sidebar = () => {
     return (
         <div className="sidebar">
+            <div>
             <ButtonNav className="sidebar__button" description=""/>
             <ButtonNav className="sidebar__button" description={GLOBAL.SIDEBAR.BUTTON_HOME}/>
             <ButtonNav className="sidebar__button" description={GLOBAL.SIDEBAR.BUTTON_EXPLORE}/>
@@ -15,6 +16,7 @@ const Sidebar = () => {
             <ButtonNav className="sidebar__button" description={GLOBAL.SIDEBAR.BUTTON_PROFILE}/>
             <ButtonNav className="sidebar__button" description={GLOBAL.SIDEBAR.BUTTON_OPTIONS}/>
             <ButtonNav className="sidebar__button sidebar__button--twittear" description="Twittear"/>
+            </div>
         </div>
     )
 }

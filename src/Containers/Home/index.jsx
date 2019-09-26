@@ -3,19 +3,17 @@ import { SearchBar, Suggestions, Trends, Sidebar } from '../../Components'
 
 const Home = () => {
     return (
-        <>
-            <nav>
+        <div className="home">
+            <div className="home__col home__col--left">
                 <Sidebar />
-            </nav>
-            <section>
-
-            </section>
-            <aside>
-                <footer>
-
-                </footer>
-            </aside>
-        </>
+            </div>
+            <div className="home__col">
+                <Suggestions />
+            </div>
+            <div className="home__col home__col--right">
+                <Suggestions />
+            </div>
+        </div>
     )
 }
 

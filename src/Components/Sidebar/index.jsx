@@ -8,7 +8,7 @@ const Sidebar = () => {
         <div className="sidebar">
             <div className="sidebar__box">
             <Button className="sidebar__box__button" description="" icon={<i class="fab fa-twitter sidebar__box__button__icon sidebar__box__button__icon--twitter"></i>}/>
-            <Button className="sidebar__box__button" description={GLOBAL.SIDEBAR.BUTTON_HOME} icon={<i class="fas fa-home sidebar__box__button__icon"></i>}/>
+            <Button className="sidebar__box__button sidebar__box__button--active" description={GLOBAL.SIDEBAR.BUTTON_HOME} icon={<i class="fas fa-home sidebar__box__button__icon"></i>}/>
             <Button className="sidebar__box__button" description={GLOBAL.SIDEBAR.BUTTON_EXPLORE} icon={<i class="fas fa-hashtag sidebar__box__button__icon"></i>}/>
             <Button className="sidebar__box__button" description={GLOBAL.SIDEBAR.BUTTON_NOTIF} icon={<i class="far fa-bell sidebar__box__button__icon"></i>}/>
             <Button className="sidebar__box__button" description={GLOBAL.SIDEBAR.BUTTON_DM} icon={<i class="far fa-envelope sidebar__box__button__icon"></i>}/>

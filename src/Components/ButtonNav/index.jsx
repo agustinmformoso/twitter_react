@@ -1,9 +1,8 @@
 import React from 'react';
-import './styles.css';
 
-const ButtonNav = ({ description, icon }) => {
+const ButtonNav = ({ description, icon, className }) => {
     return (
-        <button>{icon} {description}</button>
+        <button className={className}>{icon} {description}</button>
     )
 }
 

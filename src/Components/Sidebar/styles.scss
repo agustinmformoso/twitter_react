@@ -6,12 +6,19 @@
         &__button {
             background-color: transparent;
             display: block;
-            border-radius: 20px;
+            border-radius: 50px;
             border-color: transparent;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             padding: 10px;
             margin: 10px;
             font-weight: bold;
+            text-align: center;
+            outline:none;
+
+            &--active {
+                background-color: transparent;
+                color: #0A9AFF;
+            }
 
             &:hover {
                 background-color: rgba(77, 166, 255, 0.27);
@@ -20,6 +27,7 @@
             }
 
             &--twittear {
+                margin-top: 20px;
                 color: white;
                 background-color: #0A9AFF;
                 width: 90%;
@@ -29,11 +37,20 @@
                     background-color: #0982D9;
                 }
             }
-        }
 
-        .button_icon {
-            width: 25px;
-            margin-right: 10px;
+            &__icon {
+                margin-right: 15px;
+
+                &--profile {
+                    width: 25px;
+                    border-radius: 20px;
+                }
+
+                &--twitter {
+                    margin-right: 0;
+                    color: #0A9AFF;
+                }
+            }
         }
     }
 }

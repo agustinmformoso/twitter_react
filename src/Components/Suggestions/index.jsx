@@ -2,6 +2,8 @@ import React from 'react'
 import { Button } from '..'
 
 const Suggestions = () => {
+    const url ='https://pbs.twimg.com/profile_images/1113629235082608641/fkvxiwJk_400x400.png'
+
     return (
         <div className="suggestions">
             <div className="suggestions__title">
@@ -9,14 +11,30 @@ const Suggestions = () => {
             </div>
             <div className="suggestions__follow-suggestion">
                 <div className="suggestions__follow-suggestion__profile-picture">
-                    <img />
+                    <img className="suggestions__follow-suggestion__profile-picture__img" src={url} alt={url} width="50" />
                 </div>
-                <div className="suggestions__follow-suggestion__account">
-                    <p className="suggestions__follow-suggestion__account__p">Account Name</p>
-                    <span className="suggestions__follow-suggestion__account__span">@account_name</span>
+                <div className="suggestions__follow-suggestion__flex">
+                    <div className="suggestions__follow-suggestion__flex__account">
+                        <p className="suggestions__follow-suggestion__flex__account__p">Account Name</p>
+                        <span className="suggestions__follow-suggestion__flex__account__span">@account_name</span>
+                    </div>
+                    <div className="suggestions__follow-suggestion__flex__follow">
+                        <Button className="suggestions__follow-suggestion__flex__follow__button" description="Seguir" />
+                    </div>
                 </div>
-                <div className="suggestions__follow-suggestion__follow">
-                    <Button className="suggestions__follow-suggestion__follow__button" description="Seguir" />
+            </div>
+            <div className="suggestions__follow-suggestion">
+                <div className="suggestions__follow-suggestion__profile-picture">
+                    <img className="suggestions__follow-suggestion__profile-picture__img" src={url} alt={url} width="50" />
+                </div>
+                <div className="suggestions__follow-suggestion__flex">
+                    <div className="suggestions__follow-suggestion__flex__account">
+                        <p className="suggestions__follow-suggestion__flex__account__p">Account Name</p>
+                        <span className="suggestions__follow-suggestion__flex__account__span">@account_name</span>
+                    </div>
+                    <div className="suggestions__follow-suggestion__flex__follow">
+                        <Button className="suggestions__follow-suggestion__flex__follow__button" description="Seguir" />
+                    </div>
                 </div>
             </div>
             <div className="suggestions__show-more">

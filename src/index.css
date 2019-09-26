@@ -1,12 +1,13 @@
 @font-face {
     font-family: 'Helvetica';
-    src: url(./Resources/Fonts/HelveticaNeueLTStd-Lt.otf)
+    src: url(./Resources/Fonts/HelveticaNeueLTStd-Md.otf);
+    font-weight: bold;
 }
 
 @font-face {
     font-family: 'Helvetica';
-    src: url(./Resources/Fonts/HelveticaNeueLTStd-Md.otf);
-    font-weight: bold;
+    src: url(./Resources/Fonts/HelveticaNeueLTStd-Lt.otf);
+    font-weight: normal;
 }
 
 * {

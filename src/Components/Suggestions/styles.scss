@@ -5,50 +5,93 @@
 
     &__title {
         text-align: center;
-        font-family: 'Helvetica Black';
-        padding: 5px 0;
+        font-family: 'Helvetica';
+        font-weight: bold;
+        padding: 10px 0;
+        text-align: left;
+        margin-left: 20px;
+        font-size: 1.2rem;
     }
 
     &__follow-suggestion {
-        border-top: 1px solid $border;
-        border-bottom: 1px solid $border;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         padding: 5px 0;
+        border-bottom: 1px solid $border;
 
-        &__account {
-
-            &__p {
-                font-weight: bold;
-            }
-
-            &__span {
-                color: $muted;
-            }
+        &:hover {
+            background-color: $background-hover;
+            cursor: pointer;
         }
 
-        &__follow {
-            margin-left: 10px;
+        &:nth-child(2) {
+            border-top: 1px solid $border;
+        }
+
+        &__profile-picture {
+
+            &__img {
+                border-radius: 50px;
+                margin: 0 20px;
+            }
+        }
+        
+        &__flex {
             display: flex;
-            align-items: center;
+            width: 100%;
+            justify-content: space-between;
 
-            &__button {
-                padding: 10px;
-                border-radius: 20px;
-                border: 2px solid $primary;
-                background-color: transparent;
-                color: $primary;
-                font-weight: bold;
-                font-size: 1rem;
+            &__account {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+                &__p {
+                    font-weight: bold;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+    
+                &__span {
+                    color: $muted;
+                }
             }
-        }
+
+            &__follow {
+                margin-left: 10px;
+                display: flex;
+                align-items: center;
+    
+                &__button {
+                    padding: 10px 30px;
+                    border-radius: 20px;
+                    border: 2px solid $primary;
+                    background-color: transparent;
+                    color: $primary;
+                    font-weight: bold;
+                    font-size: 1rem;
+                    margin-right: 20px;
+
+                    &:hover {
+                        background-color: $button-hover;
+                        border-radius: 20px;
+                        cursor: pointer;
+                        @include all-ease();
+                    }
+                }
+            }
+        }        
     }
 
     &__show-more {
-        padding: 10px 15px;
+        padding: 10px 15px;        
 
         &:hover {
-            
+            cursor: pointer;
+            background-color: $background-hover;
+            border-radius: 0  0 20px 20px;;
         }
         
         &__a {

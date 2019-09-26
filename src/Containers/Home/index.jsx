@@ -5,12 +5,14 @@ const Home = () => {
     return (
         <div className="home">
             <div className="home__col home__col--left">
-                <Suggestions />
+                <Sidebar />
             </div>
             <div className="home__col">
                 <Suggestions />
             </div>
             <div className="home__col home__col--right">
+                <SearchBar />
+                <Trends />
                 <Suggestions />
             </div>
         </div>

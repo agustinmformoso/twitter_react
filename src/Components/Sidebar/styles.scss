@@ -1,4 +1,5 @@
 .sidebar {
+
     &__box{
         width: 240px;
         margin-left: auto;
@@ -17,24 +18,24 @@
 
             &--active {
                 background-color: transparent;
-                color: #0A9AFF;
+                color: $primary;
             }
 
             &:hover {
-                background-color: rgba(77, 166, 255, 0.27);
-                color: #0A9AFF;
+                background-color: $button-sidebar-hover;
+                color: $primary;
                 cursor: pointer;
             }
 
-            &--twittear {
+            &--twit {
                 margin-top: 20px;
-                color: white;
-                background-color: #0A9AFF;
+                color: $white;
+                background-color: $primary;
                 width: 90%;
 
                 &:hover{
-                    color: white;
-                    background-color: #0982D9;
+                    color: $white;
+                    background-color: $main-button-hover;
                 }
             }
 
@@ -48,7 +49,7 @@
 
                 &--twitter {
                     margin-right: 0;
-                    color: #0A9AFF;
+                    color: $primary;
                 }
             }
         }

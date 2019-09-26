@@ -20,7 +20,7 @@ const Suggestions = () => {
                 </div>
             </div>
             <div className="suggestions__show-more">
-                <a href="#!">Mostrar más</a>
+                <a className="suggestions__show-more__a" href="#!">Mostrar más</a>
             </div>
         </div>
     )

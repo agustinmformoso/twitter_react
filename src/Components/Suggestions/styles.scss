@@ -1,17 +1,17 @@
 .suggestions {
-    background-color: #F4F8FB;
+    background-color: $background;
     margin: 20px 0;
     border-radius: 20px;
 
     &__title {
         text-align: center;
+        font-family: 'Helvetica Black';
         padding: 5px 0;
-        font-weight: bold;
     }
 
     &__follow-suggestion {
-        border-top: 1px solid #d0d6e2;
-        border-bottom: 1px solid #d0d6e2;
+        border-top: 1px solid $border;
+        border-bottom: 1px solid $border;
         display: flex;
         justify-content: center;
         padding: 5px 0;
@@ -23,7 +23,7 @@
             }
 
             &__span {
-                color: #999999;
+                color: $muted;
             }
         }
 
@@ -35,12 +35,25 @@
             &__button {
                 padding: 10px;
                 border-radius: 20px;
-                border: 2px solid #1da1f2;
+                border: 2px solid $primary;
                 background-color: transparent;
-                color: #1da1f2;
+                color: $primary;
                 font-weight: bold;
                 font-size: 1rem;
             }
+        }
+    }
+
+    &__show-more {
+        padding: 10px 15px;
+
+        &:hover {
+            
+        }
+        
+        &__a {
+            text-decoration: none;
+            color: $primary;
         }
     }
     

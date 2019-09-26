@@ -1,28 +1,50 @@
 .searchbar {
-    width: 100%;
-    background-color: $background-hover;
-    padding: 15px;
-    border-radius: 50px;
     margin-top: 20px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    border: 1px solid transparent;
+    width: auto;
 
-    &__i {
-        font-size: 1.3rem;
-        color: $muted;
-        margin-left: 5px;
-    }
-
-    &__input {
-        background: transparent;
-        border: none;
-        font-size: 1.2rem;
-        color: $muted;
+    &__search {
         width: 100%;
-        margin-left: 20px;
+        background-color: $background-hover;
+        padding: 15px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: space-between;
 
-        &:focus {
-            outline: none;
+        &__i {
+            font-size: 1.3rem;
+            color: $muted;
+            margin-left: 5px;
         }
+    
+        &__input {
+            background: transparent;
+            border: none;
+            font-size: 1.2rem;
+            color: $muted;
+            width: 100%;
+            margin-left: 20px;
+    
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    
+    &__dropdown {
+        background: white;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        border-radius: 20px;
+        min-height: 200px;
+        position: absolute;
+        width: inherit;
+        z-index: 1;
+        top: 74px;
+        padding: 40px 20px;
+        color: $muted;
+        font-size: 1.3rem;
+        color: $font;
     }
 }

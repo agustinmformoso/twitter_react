@@ -1,0 +1,10 @@
+import TwitterIcon from './dove-solid.svg';
+import BellIcon from './bell-regular.svg';
+import BookmarkIcon from './bookmark-regular.svg';
+import EmailIcon from './envelope-regular.svg';
+import HashtagIcon from './hashtag-solid.svg';
+import ListIcon from './list-alt-regular.svg';
+import HomeIcon from './home-solid.svg';
+import DotsIcon from './ellipsis-h-solid.svg';
+import ProfilePic from './profilepic.jpg';
+export { TwitterIcon, BellIcon, BookmarkIcon, EmailIcon, HashtagIcon, ListIcon, HomeIcon, DotsIcon, ProfilePic };

@@ -38,6 +38,24 @@
             &:focus {
                 outline: none;
             }
+
+            &__button {
+                background: transparent;
+                border: none;
+
+                &__i {
+                    font-size: 1.4rem;
+                    color: $primary;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
         }
     }
     
@@ -49,7 +67,7 @@
         max-height: calc(100% - 400px);
         color: $muted;
         font-size: 1.3rem;
-        color: $font;   
+        color: $font;
 
         z-index: 1;
         position: absolute;
@@ -57,9 +75,7 @@
         top: 76px;
         width: calc(100% - 66.66% - 115px);
 
-        overflow-y: auto;
-
- 
+        overflow-y: auto; 
 
         &__p {
             padding: 20px;
@@ -74,49 +90,58 @@
                 background: $background-hover;
             }
 
-            &:nth-child(3n) {
-                border-bottom: 20px solid $b;
-            }
-
             &__p {
                 font-size: 1.4rem;
                 color: black;
                 font-weight: bold;
             }
+
+            &__span {
+                color: $muted;
+                font-size: 1.3rem;
+            }
         }
 
-        &__account-search {
-            border-bottom: 1px solid $border;
-            display: flex;
-            padding: 10px 15px;
-            width: 100%;
-            font-size: 1.2rem;
-
-            &:nth-child(3) {
-                background-color: red;
-            }
-
-            &:hover {
-                cursor: pointer;
-                background-color: $background-hover;
-            }
-
-            &__profile-picture {            
-                &__img {
-                    border-radius: 50px;
-                }
-            }
-
-            &__account {
-                margin-left: 20px;
+        &__accounts-container {
+            &__account-search {
+                border-bottom: 1px solid $border;
+                display: flex;
+                padding: 10px 15px;
                 width: 100%;
+                font-size: 1.2rem;
 
-                &__span {
-                    font-weight: bold;
-                    color: black;
+                &:only-child {
+                    margin-top: 10px;
+                    border-top: none!important;
+                }
+
+                &:nth-child(1) {
+                    border-top: 15px solid $border;
+                }
+    
+                &:hover {
+                    cursor: pointer;
+                    background-color: $background-hover;
+                }
+    
+                &__profile-picture {            
+                    &__img {
+                        border-radius: 50px;
+                    }
+                }
+    
+                &__account {
+                    margin-left: 20px;
+                    width: 100%;
+    
+                    &__span {
+                        font-weight: bold;
+                        color: black;
+                    }
                 }
             }
         }
+        
 
         &--go-to {
             padding: 20px 15px;

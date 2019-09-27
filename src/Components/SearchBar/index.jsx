@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
-import accounts from '../../Store/accounts.json';
+import { Button } from '..'
+import accounts from '../../Store/accounts.json'
 
 const SearchBar = () => {
 
@@ -10,8 +11,6 @@ const SearchBar = () => {
     const [open, setOpen] = useState(false)
     const [isActive, setIsActive] = useState('')
     const [search, setSearch] = useState('')
-
-    const url ='https://pbs.twimg.com/profile_images/1113629235082608641/fkvxiwJk_400x400.png'
 
     const handleClick = (e) => {
         if (node.current.contains(e.target)) {  
@@ -39,13 +38,13 @@ const SearchBar = () => {
 
     const renderAccounts = (accounts) => {
         return (
-            <div className="searchbar__dropdown__account-search">
-                <div className="searchbar__dropdown__account-search__profile-picture">
-                    <img className="searchbar__dropdown__account-search__profile-picture__img" src={url} alt={url} width={50} />
+            <div className="searchbar__dropdown__accounts-container__account-search">
+                <div className="searchbar__dropdown__accounts-container__account-search__profile-picture">
+                    <img className="searchbar__dropdown__accounts-container__account-search__profile-picture__img" src={accounts.url} alt={accounts.url} width={50} />
                 </div>
-                <div className="searchbar__dropdown__account-search__account">
-                    <span className="searchbar__dropdown__account-search__account__span">{accounts.name.substring(0, 20)}</span>
-                    <p className="searchbar__dropdown__account-search__account__p">{accounts.account}</p>
+                <div className="searchbar__dropdown__accounts-container__account-search__account">
+                    <span className="searchbar__dropdown__accounts-container__account-search__account__span">{accounts.name.substring(0, 20)}</span>
+                    <p className="searchbar__dropdown__accounts-container__account-search__account__p">{accounts.account}</p>
                 </div>
             </div>
         )
@@ -54,13 +53,18 @@ const SearchBar = () => {
     const renderHashtags = (accounts) => {
         return (
             <div className="searchbar__dropdown__hashtag-search">
-                <p className="searchbar__dropdown__hashtag-search__p">{accounts.account}</p>
+                <p className="searchbar__dropdown__hashtag-search__p">{accounts.hashtag}</p>
+                {accounts.isTrend && <span className="searchbar__dropdown__hashtag-search__span">Tendencias</span>}
             </div>
         )
     }
 
-    const filteredAccounts = accounts.filter(i => {
-        return i.name.toLowerCase().indexOf(search.toLowerCase()) !== -1;
+    const filteredAccounts = accounts.accounts.filter(i => {
+        return i.name.toLowerCase().indexOf(search.toLowerCase()) !== -1 || i.account.toLowerCase().indexOf(search.toLowerCase()) !== -1;
+    })
+
+    const filteredTrends = accounts.trends.filter(i => {
+        return i.hashtag.toLowerCase().indexOf(search.toLowerCase()) !== -1;
     })
 
     return (
@@ -68,6 +72,9 @@ const SearchBar = () => {
             <div className={`searchbar__search ${isActive}`} onClick={(e) => setOpen(!open)}>
                 <i className="fas fa-search searchbar__search__i"></i>
                 <input onChange={handleChange} className="searchbar__search__input" type="text" placeholder="Buscar en Twitter" />
+                {
+                    search && isActive ? <Button className="searchbar__search__input__button" icon={<i class="fas fa-times-circle searchbar__search__input__button__i"></i>}></Button> : null
+                }
             </div>
             {open && (
                 <div className="searchbar__dropdown">
@@ -78,18 +85,20 @@ const SearchBar = () => {
                     }
                     {
                         search ?
-                        filteredAccounts.slice(0, 3).map(i => {
+                        filteredTrends.slice(0, 3).map(i => {
                             return renderHashtags(i);
                         })
                         : null
                     }
-                    {
-                        search ?
-                        filteredAccounts.map(i => {
-                            return renderAccounts(i);
-                        })
-                        : null
-                    }
+                    <div className="searchbar__dropdown__accounts-container">
+                        {
+                            search ?
+                            filteredAccounts.map(i => {
+                                return renderAccounts(i);
+                            })
+                            : null
+                        }
+                    </div>
                     {
                         search &&
                         filteredAccounts ? <p className="searchbar__dropdown--go-to">Ir a @{search}</p>

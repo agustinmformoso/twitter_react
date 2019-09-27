@@ -2,10 +2,13 @@
 @import './mixins.scss';
 
 // components
+@import '../../Components/Header/styles.scss';
 @import '../../Components/Sidebar/styles.scss';
 @import '../../Components/SearchBar/styles.scss';
 @import '../../Components/Suggestions/styles.scss';
 @import '../../Components/Trends/styles.scss';
+@import '../../Components/Footer/styles.scss';
+@import '../../Components/NewTweet/styles.scss';
 
 // containers
 @import '../../Containers/Home/styles.scss';

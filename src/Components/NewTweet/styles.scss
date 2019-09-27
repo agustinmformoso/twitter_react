@@ -1,0 +1,73 @@
+.newtweet {
+    padding: 10px;
+    border: 0.5px solid rgba(223, 223, 223, 0.534);
+    border-top: none;
+    
+    &__header {
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+        color: #999999;
+
+        &__pic {
+            width: 50px;
+            border-radius: 50px;
+            margin: 0 10px 0 5px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #1DA1F2;
+        margin: 10px 5px 0 60px;
+
+        &__left {
+            font-size: 1.4rem;
+            
+            &__icons{
+                margin: 7px;
+            }
+        }
+        
+        &__right {
+            display: flex;
+            align-items: center;
+
+            &__icons {
+                margin: 7px;
+
+                &--circle {
+                    color: #999999;
+                    font-size: 1.4rem;
+                }
+
+                &--plus {
+                    color: #1DA1F2;
+                    font-size: 2rem;
+                }
+            }
+
+            &__span {
+                color: #999999;
+                font-size: 2rem;
+            }
+
+            &__button {
+                cursor: pointer;
+                border-color: transparent;
+                background-color: transparent;
+
+                &--twit {
+                    color: white;
+                    border-radius: 50px;
+                    background-color: #1DA1F2;
+                    font-weight: bold;
+                    padding: 8px 10px 8px 10px;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

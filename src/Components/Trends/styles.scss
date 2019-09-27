@@ -61,7 +61,7 @@
             display: flex;
 
             &__content {
-                padding: 10px 5px 0 20px;
+                padding: 10px 5px 10px 20px;
 
                 &__p {
                     color: $muted;
@@ -79,6 +79,7 @@
                 
                 &__img {
                     border-radius: 0 20px 20px 0;
+                    height: 100%;
                 }
             }
         }

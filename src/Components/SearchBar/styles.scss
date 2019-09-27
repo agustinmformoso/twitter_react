@@ -2,16 +2,24 @@
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    border: 1px solid transparent;
-    width: auto;
 
     &__search {
         width: 100%;
         background-color: $background-hover;
+        border: 1px solid transparent;
         padding: 15px;
         border-radius: 50px;
         display: flex;
         justify-content: space-between;
+
+        &--active {
+            background: white;
+            border: 1px solid $primary;
+
+            & i {
+                color: $primary;
+            }
+        }
 
         &__i {
             font-size: 1.3rem;
@@ -38,13 +46,15 @@
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
         border-radius: 20px;
         min-height: 200px;
-        position: absolute;
-        width: inherit;
-        z-index: 1;
-        top: 74px;
         padding: 40px 20px;
         color: $muted;
         font-size: 1.3rem;
         color: $font;
+
+        z-index: 1;
+        position: absolute;
+        overflow: hidden;
+        top: 76px;
+        width: calc(100% - 66.66% - 115px)
     }
 }

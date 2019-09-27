@@ -1,5 +1,5 @@
 import React from 'react'
-import { SearchBar, Suggestions, Trends, Sidebar } from '../../Components'
+import { SearchBar, Suggestions, Trends, Sidebar, Header } from '../../Components'
 
 const Home = () => {
     return (
@@ -8,7 +8,7 @@ const Home = () => {
                 <Sidebar />
             </div>
             <div className="home__col">
-                <Suggestions />
+                <Header />
             </div>
             <div className="home__col home__col--right">
                 <SearchBar />

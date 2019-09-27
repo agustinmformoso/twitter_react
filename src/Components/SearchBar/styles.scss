@@ -44,17 +44,87 @@
     &__dropdown {
         background: white;
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-        border-radius: 20px;
+        border-radius: 15px;
         min-height: 200px;
-        padding: 40px 20px;
+        max-height: calc(100% - 400px);
         color: $muted;
         font-size: 1.3rem;
-        color: $font;
+        color: $font;   
 
         z-index: 1;
         position: absolute;
         overflow: hidden;
         top: 76px;
-        width: calc(100% - 66.66% - 115px)
+        width: calc(100% - 66.66% - 115px);
+
+        overflow-y: auto;
+
+ 
+
+        &__p {
+            padding: 20px;
+        }
+
+        &__hashtag-search {
+            padding: 20px;
+            border-bottom: 1px solid $border;
+
+            &:hover {
+                cursor: pointer;
+                background: $background-hover;
+            }
+
+            &:nth-child(3n) {
+                border-bottom: 20px solid $b;
+            }
+
+            &__p {
+                font-size: 1.4rem;
+                color: black;
+                font-weight: bold;
+            }
+        }
+
+        &__account-search {
+            border-bottom: 1px solid $border;
+            display: flex;
+            padding: 10px 15px;
+            width: 100%;
+            font-size: 1.2rem;
+
+            &:nth-child(3) {
+                background-color: red;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: $background-hover;
+            }
+
+            &__profile-picture {            
+                &__img {
+                    border-radius: 50px;
+                }
+            }
+
+            &__account {
+                margin-left: 20px;
+                width: 100%;
+
+                &__span {
+                    font-weight: bold;
+                    color: black;
+                }
+            }
+        }
+
+        &--go-to {
+            padding: 20px 15px;
+
+            &:hover {
+                cursor: pointer;
+                background: $background-hover;
+            }
+        }
     }
 }

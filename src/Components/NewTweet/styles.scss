@@ -6,7 +6,6 @@
     &__header {
         display: flex;
         align-items: center;
-        font-size: 1.2rem;
         color: #999999;
 
         &__pic {
@@ -14,20 +13,38 @@
             border-radius: 50px;
             margin: 0 10px 0 5px;
         }
+
+        &__textarea {
+            font-size: 1.2rem;
+            outline: none;
+            border: none;
+            resize: none;
+        }
     }
 
     &__bottom {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: #1DA1F2;
         margin: 10px 5px 0 60px;
 
         &__left {
-            font-size: 1.4rem;
+
+            &__button {
+                border-color: transparent;
+                background-color: transparent;
+            }
             
-            &__icons{
-                margin: 7px;
+            &__icons {
+                cursor: pointer;
+                font-size: 1.4rem;
+                color: #1DA1F2;
+                padding: 9px;
+                
+                &:hover {
+                    background-color: rgba(77, 166, 255, 0.27);
+                    border-radius: 50px;
+                }
             }
         }
         
@@ -44,28 +61,39 @@
                 }
 
                 &--plus {
+                    cursor: pointer;
                     color: #1DA1F2;
                     font-size: 2rem;
+
+                    &:hover {
+                        background-color: rgba(77, 166, 255, 0.27);
+                        border-radius: 50px;
+                    }
                 }
             }
 
             &__span {
                 color: #999999;
-                font-size: 2rem;
+                font-size: 1.9rem;
+                margin-bottom: 4px;
             }
 
             &__button {
-                cursor: pointer;
                 border-color: transparent;
                 background-color: transparent;
 
                 &--twit {
+                    cursor: pointer;
                     color: white;
                     border-radius: 50px;
                     background-color: #1DA1F2;
                     font-weight: bold;
                     padding: 8px 10px 8px 10px;
                     font-size: 1rem;
+
+                    &:hover{
+                        background-color: #0982D9;
+                    }
                 }
             }
         }

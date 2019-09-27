@@ -6,5 +6,6 @@ import Button from './Button'
 import Footer from './Footer'
 import Header from './Header'
 import NewTweet from './NewTweet'
+import Textarea from './Textarea'
 
-export { SearchBar, Suggestions, Trends, Sidebar, Button, Footer, Header, NewTweet }
+export { SearchBar, Suggestions, Trends, Sidebar, Button, Footer, Header, NewTweet, Textarea }

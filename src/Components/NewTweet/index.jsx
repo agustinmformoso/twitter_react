@@ -22,7 +22,7 @@ const NewTweet = () => {
                     <i className="far fa-circle newtweet__bottom__right__icons newtweet__bottom__right__icons--circle"></i>
                     <span className="newtweet__bottom__right__span">|</span>
                     <Button className="newtweet__bottom__right__button" icon={<i className="fas fa-plus-circle newtweet__bottom__right__icons newtweet__bottom__right__icons--plus"></i>}/>
-                    <Button className="newtweet__bottom__right__button newtweet__bottom__right__button--twit" description={GLOBAL.SIDEBAR.BUTTON_TWIT} />
+                    <Button className="newtweet__bottom__right__button newtweet__bottom__right__button--twit" description={GLOBAL.SIDEBAR.BUTTON_TWIT}/>
                 </div>
             </div>
         </div>

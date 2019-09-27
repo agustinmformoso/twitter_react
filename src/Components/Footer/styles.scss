@@ -1,0 +1,21 @@
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+
+    &__a {
+        text-decoration: none;
+        margin-right: 15px;
+        color: $font;
+        margin-top: 20px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__span {
+        color: $font;
+        margin-top: 20px;
+    }
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { SearchBar, Suggestions, Trends, Sidebar } from '../../Components'
+import { SearchBar, Suggestions, Trends, Sidebar, Footer } from '../../Components'
 
 const Home = () => {
     return (
@@ -14,6 +14,7 @@ const Home = () => {
                 <SearchBar />
                 <Trends />
                 <Suggestions />
+                <Footer />
             </div>
         </div>
     )

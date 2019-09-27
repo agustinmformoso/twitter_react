@@ -7,7 +7,8 @@ const GLOBAL = {
       BUTTON_SAVED: "Guardados",
       BUTTON_LISTS: "Listas",
       BUTTON_PROFILE: "Perfil",
-      BUTTON_OPTIONS: "Más opciones"
+      BUTTON_OPTIONS: "Más opciones",
+      BUTTON_TWIT: "Twittear"
     },
   };
   

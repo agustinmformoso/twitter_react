@@ -10,6 +10,18 @@ const GLOBAL = {
       BUTTON_OPTIONS: "Más opciones",
       BUTTON_TWIT: "Twittear"
     },
+    FOOTER: {
+      TERMS: "Términos",
+      PRIVACY_POLICY: "Política de privacidad",
+      COOKIES: "Cookies",
+      ADS_INFO: "Información de anuncios",
+      MORE: "Más opciones",
+      ABOUT: "Acerca de",
+      STATUS: "Estado",
+      BUSINESSES: "Empresas",
+      DEVELOPERS: "Desarrolladores",
+      COPY: "Twitter, Inc."
+    },
     HEADER: {
       HEADER_HOME: "Inicio",
       DROPDOWN_TOP: "Inicio te muestra los Tweets destacados primero",

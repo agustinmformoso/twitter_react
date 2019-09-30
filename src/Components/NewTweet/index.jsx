@@ -1,5 +1,4 @@
 import React from 'react';
-import './styles.scss'
 import { ProfilePic } from '../../Resources/Images/index';
 import { Button, Textarea } from '../index'
 import { GLOBAL } from '../../Config/global';

@@ -43,6 +43,10 @@
                 background: transparent;
                 border: none;
 
+                &:focus {
+                    outline: none;
+                }
+
                 &__i {
                     font-size: 1.4rem;
                     color: $primary;
@@ -51,9 +55,6 @@
                         cursor: pointer;
                     }
 
-                    &:focus {
-                        outline: none;
-                    }
                 }
             }
         }

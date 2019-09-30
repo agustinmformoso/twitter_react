@@ -6,6 +6,9 @@ const SearchBar = () => {
 
     /* Heredar width del padre del dropdown */
     /* Clase --active  */
+    /* Error scss con variables */
+    /* Textarea */
+    /* Resetear state en busqueda */
 
     const node = useRef()
     const [open, setOpen] = useState(false)
@@ -25,6 +28,10 @@ const SearchBar = () => {
     const handleChange = (e) => {
         setSearch(e.target.value)
         console.log(search)
+    }
+
+    const handleClose = () => {
+        setSearch('')
     }
 
     useEffect(() => {
@@ -71,9 +78,9 @@ const SearchBar = () => {
         <div ref={node} className="searchbar">
             <div className={`searchbar__search ${isActive}`} onClick={(e) => setOpen(!open)}>
                 <i className="fas fa-search searchbar__search__i"></i>
-                <input onChange={handleChange} className="searchbar__search__input" type="text" placeholder="Buscar en Twitter" />
+                <input name="busqueda" value={search} onChange={handleChange} className="searchbar__search__input" type="text" placeholder="Buscar en Twitter" />
                 {
-                    search && isActive ? <Button className="searchbar__search__input__button" icon={<i class="fas fa-times-circle searchbar__search__input__button__i"></i>}></Button> : null
+                    search && isActive ? <Button className="searchbar__search__input__button" icon={<i onClick={() => handleClose()} className="fas fa-times-circle searchbar__search__input__button__i"></i>}></Button> : null
                 }
             </div>
             {open && (

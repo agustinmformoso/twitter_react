@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { GLOBAL } from '../../Config/global';
 
 const Header = () => {
     const node = useRef()
@@ -24,7 +25,7 @@ const Header = () => {
     return (
         <div className="header">
             <span className="header__text">
-                Inicio
+                {GLOBAL.HEADER.HEADER_HOME}
             </span>
             <span className="header__icon" ref={node} onClick={() => setDropdown(!dropdown)}>
                 <i class="far fa-star"></i>
@@ -32,19 +33,19 @@ const Header = () => {
             {dropdown && (<div className="header__dropdown">
                 <div className="header__dropdown__top">
                     <img className="header__dropdown__top__img" src="highlight.png" alt="" />
-                    <h3 className="header__dropdown__top__title">Inicio te muestra los Tweets destacados primero</h3>
+                    <h3 className="header__dropdown__top__title">{GLOBAL.HEADER.DROPDOWN_TOP}</h3>
                 </div>
                 <div className="header__dropdown__bottom">
                     <span className="header__dropdown__bottom__span">
                         <i class="fas fa-exchange-alt header__dropdown__bottom__span__icon"></i>
                         <div>
-                            <p className="header__dropdown__bottom__span__p">Cambiar a la vista de Tweets más recientes</p>
-                            <p className="header__dropdown__bottom__span__info">Si estás inactivo durante un tiempo, volverás a Inicio.</p>
+                            <p className="header__dropdown__bottom__span__p">{GLOBAL.HEADER.DROPDOWN_SPAN_1}</p>
+                            <p className="header__dropdown__bottom__span__info">{GLOBAL.HEADER.DROPDOWN_SPAN_1_INFO}</p>
                         </div>
                     </span>
                     <span className="header__dropdown__bottom__span">
                         <i className="fas fa-cog header__dropdown__bottom__span__icon"></i>
-                        <p className="header__dropdown__bottom__span__p">Ver preferencias de contenido</p></span>
+                        <p className="header__dropdown__bottom__span__p">{GLOBAL.HEADER.DROPDOWN_SPAN_2}</p></span>
                 </div>
             </div>
             )}

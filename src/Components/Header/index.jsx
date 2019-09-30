@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { GLOBAL } from '../../Config/global';
+import { HeaderDropdownIcon } from '../../Resources/Images/index';
 
 const Header = () => {
     const node = useRef()
@@ -32,7 +33,7 @@ const Header = () => {
             </span>
             {dropdown && (<div className="header__dropdown">
                 <div className="header__dropdown__top">
-                    <img className="header__dropdown__top__img" src="highlight.png" alt="" />
+                    <img className="header__dropdown__top__img" src={HeaderDropdownIcon} alt="" />
                     <h3 className="header__dropdown__top__title">{GLOBAL.HEADER.DROPDOWN_TOP}</h3>
                 </div>
                 <div className="header__dropdown__bottom">

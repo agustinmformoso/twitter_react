@@ -4,12 +4,16 @@ import { Button, Textarea } from '../index'
 import { GLOBAL } from '../../Config/global';
 
 const NewTweet = () => {
+    const handleKDown = (e) => {
+        e.target.style.height = 'inherit';
+        e.target.style.height = `${e.target.scrollHeight}px`;
+    }
 
     return (
         <div className="newtweet">
             <div className="newtweet__header">
                 <img src={ProfilePic} className="newtweet__header__pic" />
-                <Textarea type="text" name="newtweet" className="newtweet__header__textarea" placeholder="¿Qué está pasando?" />
+                <Textarea handleKeyDown={(e) => handleKDown(e)} type="text" name="newtweet" className="newtweet__header__textarea" placeholder="¿Qué está pasando?" />
             </div>
             <div className="newtweet__bottom">
                 <div className="newtweet__bottom__left">

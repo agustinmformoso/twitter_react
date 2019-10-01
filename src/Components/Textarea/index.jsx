@@ -1,11 +1,11 @@
 import React from 'react';
 import './styles.scss'
 
-const Textarea = ({ type, name, className, placeholder, handleOnChange, rows }) => {
+const Textarea = ({ type, name, className, placeholder, handleOnChange, handleKeyDown }) => {
 
 
     return (
-        <textarea  type={type} name={name} className={className} placeholder={placeholder} onChange={handleOnChange} />
+        <textarea onKeyDown={handleKeyDown} type={type} name={name} className={className} placeholder={placeholder} onChange={handleOnChange} />
     )
 }
 

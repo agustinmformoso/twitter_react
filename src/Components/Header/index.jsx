@@ -10,7 +10,6 @@ const Header = () => {
         if (node.current.contains(e.target)) {
             return;
         }
-
         setDropdown(false)
     }
 

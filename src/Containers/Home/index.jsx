@@ -11,7 +11,7 @@ const Home = () => {
                     <div className="home__col home__col--left">
                         <Sidebar />
                     </div>
-                    <div className="home__col">
+                    <div className="home__col home__col--center">
                         <Header />
                         <NewTweet />
                         <Timeline />

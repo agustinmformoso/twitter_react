@@ -1,16 +1,20 @@
 .home {
     display: flex;
-    justify-content: center;
     
     &__col {
+        width: 33%;
         padding: 0 15px;
 
         &--left {
-            width: 40%
+
+        }
+
+        &--center {
+            width: 50%;
         }
 
         &--right {
-            width: 50%
+            
         }
     }
 }

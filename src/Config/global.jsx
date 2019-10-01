@@ -28,6 +28,14 @@ const GLOBAL = {
       DROPDOWN_SPAN_1: "Cambiar a la vista de Tweets más recientes",
       DROPDOWN_SPAN_1_INFO: "Si estás inactivo durante un tiempo, volverás a Inicio.",
       DROPDOWN_SPAN_2: "Ver preferencias de contenido"
+    },
+    SUGGESTIONS: {
+      WHO_TO_FOLLOW: "A quién seguir",
+      SHOW_MORE: "Mostrar más"
+    },
+    TRENDS: {
+      TRENDS_FOR_YOU: "Tendencias de Buenos Aires",
+      SHOW_MORE: "Mostrar más"
     }
   };
   

@@ -1,26 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { GLOBAL } from '../../Config/global'
+import useDropdown from '../../Hooks/useDropdown'
 
 const Footer = () => {
-    const node = useRef()
-    const [open, setOpen] = useState(false)
-
-    const handleClick = (e) => {
-        if (node.current.contains(e.target)) {  
-            return;
-        }
-        
-        setOpen(false)
-    }
-
-    useEffect(() => {
-        document.addEventListener("click", handleClick);
-        
-        return () => {
-            document.removeEventListener("click", handleClick);
-               
-        }
-    }, [])
+    const { node, open,  setOpen } = useDropdown()
 
     return (
         <div className="footer">

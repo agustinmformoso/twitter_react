@@ -1,76 +1,51 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useContext } from 'react'
 import { Button } from '..'
-import accounts from '../../Store/accounts.json'
+import { UserContext } from '../../Store/userContext';
+import { TrendContext } from '../../Store/trendContext';
+import useDropdown from '../../Hooks/useDropdown'
 
 const SearchBar = () => {
-
-    /* Heredar width del padre del dropdown */
-    /* Clase --active  */
-    /* Error scss con variables */
-    /* Textarea */
-    /* Resetear state en busqueda */
-
-    const node = useRef()
-    const [open, setOpen] = useState(false)
-    const [isActive, setIsActive] = useState('')
+    const [user, setUser] = useContext(UserContext)
+    const [trend, setTrend] = useContext(TrendContext)
     const [search, setSearch] = useState('')
-
-    const handleClick = (e) => {
-        if (node.current.contains(e.target)) {  
-            setIsActive('searchbar__search--active')
-            return;
-        }
-        
-        setOpen(false)
-        setIsActive('')
-    }
-
+    const { node, open, setOpen, isActive } = useDropdown()
+    
     const handleChange = (e) => {
         setSearch(e.target.value)
-        console.log(search)
     }
 
     const handleClose = () => {
         setSearch('')
     }
 
-    useEffect(() => {
-        document.addEventListener("click", handleClick);
-        
-        return () => {
-            document.removeEventListener("click", handleClick);
-               
-        }
-    }, [])
-
-    const renderAccounts = (accounts) => {
+    const renderAccounts = (user) => {
         return (
             <div className="searchbar__dropdown__accounts-container__account-search">
                 <div className="searchbar__dropdown__accounts-container__account-search__profile-picture">
-                    <img className="searchbar__dropdown__accounts-container__account-search__profile-picture__img" src={accounts.url} alt={accounts.url} width={50} />
+                    <img className="searchbar__dropdown__accounts-container__account-search__profile-picture__img" src={user.url} alt={user.url} width={50} />
                 </div>
                 <div className="searchbar__dropdown__accounts-container__account-search__account">
-                    <span className="searchbar__dropdown__accounts-container__account-search__account__span">{accounts.name.substring(0, 20)}</span>
-                    <p className="searchbar__dropdown__accounts-container__account-search__account__p">{accounts.account}</p>
+                    <span className="searchbar__dropdown__accounts-container__account-search__account__span">{user.name.substring(0, 20)}</span>
+                    <p className="searchbar__dropdown__accounts-container__account-search__account__p">{user.account}</p>
                 </div>
             </div>
         )
     }
 
-    const renderHashtags = (accounts) => {
+    const renderHashtags = (trend) => {
         return (
             <div className="searchbar__dropdown__hashtag-search">
-                <p className="searchbar__dropdown__hashtag-search__p">{accounts.hashtag}</p>
-                {accounts.isTrend && <span className="searchbar__dropdown__hashtag-search__span">Tendencias</span>}
+                <p className="searchbar__dropdown__hashtag-search__p">{trend.hashtag}</p>
+                {trend.isTrend && <span className="searchbar__dropdown__hashtag-search__span">Tendencias</span>}
             </div>
         )
     }
 
-    const filteredAccounts = accounts.accounts.filter(i => {
+    const filteredAccounts = user.filter(i => {
         return i.name.toLowerCase().indexOf(search.toLowerCase()) !== -1 || i.account.toLowerCase().indexOf(search.toLowerCase()) !== -1;
     })
 
-    const filteredTrends = accounts.trends.filter(i => {
+    const filteredTrends = trend.filter(i => {
         return i.hashtag.toLowerCase().indexOf(search.toLowerCase()) !== -1;
     })
 
@@ -78,7 +53,7 @@ const SearchBar = () => {
         <div ref={node} className="searchbar">
             <div className={`searchbar__search ${isActive}`} onClick={(e) => setOpen(!open)}>
                 <i className="fas fa-search searchbar__search__i"></i>
-                <input name="busqueda" value={search} onChange={handleChange} className="searchbar__search__input" type="text" placeholder="Buscar en Twitter" />
+                <input autoComplete="off" name="busqueda" value={search} onChange={handleChange} className="searchbar__search__input" type="text" placeholder="Buscar en Twitter" />
                 {
                     search && isActive ? <Button className="searchbar__search__input__button" icon={<i onClick={() => handleClose()} className="fas fa-times-circle searchbar__search__input__button__i"></i>}></Button> : null
                 }

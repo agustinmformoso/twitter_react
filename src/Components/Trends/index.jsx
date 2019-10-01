@@ -1,62 +1,45 @@
-import React from 'react'
-import { Button } from '..'
+import React, { useContext } from 'react'
+import { TrendContext } from '../../Store/trendContext';
+import { GLOBAL } from '../../Config/global'
 
 const Trends = () => {
-    const url = 'https://pbs.twimg.com/media/EFW0bLWUcAAu7VI?format=jpg&name=240x240'
+    const [trend, setTrend] = useContext(TrendContext)
 
     return (
         <div className="trends">
             <div className="trends__title">
-                <h2>Tendencias de Buenos Aires</h2>
+                <h2>{GLOBAL.TRENDS.TRENDS_FOR_YOU}</h2>
                 <i className="fas fa-cog trends__title__i"></i>
             </div>
 
-            <div className="trends__trend">
-                <div className="trends__trend__content">
-                    <p className="trends__trend__content__flex__position">1 <span className="trends__trend__content__position__span">&#183;</span> Tendencias</p>
-                    <p className="trends__trend__content__hastag">#BuenJueves</p>
-                    <p className="trends__trend__content__tweets">6.158 Tweets</p>
-                </div>
-            </div>
-            <div className="trends__trend">
-                <div className="trends__trend__content">
-                    <p className="trends__trend__content__flex__position">2 <span className="trends__trend__content__position__span">&#183;</span> Tendencias</p>
-                    <p className="trends__trend__content__hastag">#citii</p>
-                </div>
-            </div>
-            <div className="trends__trend">
-                <div className="trends__trend__content">
-                    <p className="trends__trend__content__flex__position">3 <span className="trends__trend__content__position__span">&#183;</span> Tendencias</p>
-                    <p className="trends__trend__content__hastag">#HartosDeMacri</p>
-                    <p className="trends__trend__content__tweets">1.990 Tweets</p>
-                </div>
-            </div>
-            <div className="trends__trend">
-                    <div className="trends__trend__content">
-                        <p className="trends__trend__content__flex__position">4 <span className="trends__trend__content__position__span">&#183;</span> Tendencias</p>
-                        <p className="trends__trend__content__hastag">Birmajer</p>
-                        <p className="trends__trend__content__tweets">16,2 mils Tweets</p>
-                    </div>
-                    <div className="trends__trend__news">
-                        <div className="trends__trend__news__content">
-                            <p className="trends__trend__news__content__p">Argentina</p>
-                            <span className="trends__trend__news__content__span">El escritor Marcelo Birmajer denuncia haber sido agredido...</span>
+            {
+                trend.slice(0, 5).map(t => (
+                    <div className="trends__trend">
+                        <div className="trends__trend__content">
+                            <p className="trends__trend__content__flex__position">{t.position} <span className="trends__trend__content__position__span">&#183;</span> Tendencias</p>
+                            <p className="trends__trend__content__hashtag">{t.hashtag}</p>
+                            {t.tweets && (
+                                <p className="trends__trend__content__tweets">{t.tweets} Tweets</p>
+                                )
+                            }
                         </div>
-                        <div className="trends__trend__news__image">
-                            <img className="trends__trend__news__image__img" src={url} alt={url} width={180} />
+                        {t.isNews && (
+                        <div className="trends__trend__news">
+                            <div className="trends__trend__news__content">
+                                <p className="trends__trend__news__content__p">{t.country}</p>
+                                <span className="trends__trend__news__content__span">{t.description}</span>
+                            </div>
+                            <div className="trends__trend__news__image">
+                                <img className="trends__trend__news__image__img" src={t.url} alt={t.url} width={150} />
+                            </div>
                         </div>
+                        )}
                     </div>
-            </div>
-            <div className="trends__trend">
-                <div className="trends__trend__content">
-                    <p className="trends__trend__content__flex__position">5 <span className="trends__trend__content__position__span">&#183;</span> Tendencias</p>
-                    <p className="trends__trend__content__hastag">#FelizJueves</p>
-                    <p className="trends__trend__content__tweets">29,8 mil Tweets</p>
-                </div>
-            </div>
+                ))
+            }
 
             <div className="suggestions__show-more">
-                <a className="suggestions__show-more__a" href="#!">Mostrar más</a>
+                <a className="suggestions__show-more__a" href="#!">{GLOBAL.TRENDS.SHOW_MORE}</a>
             </div>
         </div>
     )

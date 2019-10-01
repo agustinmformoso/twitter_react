@@ -28,7 +28,7 @@ const Header = () => {
                 {GLOBAL.HEADER.HEADER_HOME}
             </span>
             <span className="header__icon" ref={node} onClick={() => setDropdown(!dropdown)}>
-                <i class="far fa-star"></i>
+                <i className="far fa-star"></i>
             </span>
             {dropdown && (<div className="header__dropdown">
                 <div className="header__dropdown__top">
@@ -37,7 +37,7 @@ const Header = () => {
                 </div>
                 <div className="header__dropdown__bottom">
                     <span className="header__dropdown__bottom__span">
-                        <i class="fas fa-exchange-alt header__dropdown__bottom__span__icon"></i>
+                        <i className="fas fa-exchange-alt header__dropdown__bottom__span__icon"></i>
                         <div>
                             <p className="header__dropdown__bottom__span__p">{GLOBAL.HEADER.DROPDOWN_SPAN_1}</p>
                             <p className="header__dropdown__bottom__span__info">{GLOBAL.HEADER.DROPDOWN_SPAN_1_INFO}</p>

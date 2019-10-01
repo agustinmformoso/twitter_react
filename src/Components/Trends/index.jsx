@@ -3,7 +3,11 @@ import { TrendContext } from '../../Store/trendContext';
 import { GLOBAL } from '../../Config/global'
 
 const Trends = () => {
-    const [trend, setTrend] = useContext(TrendContext)
+    const [ trend ] = useContext(TrendContext)
+
+    const randomId = () => {
+        return '_' + Math.random().toString(36).substr(2, 9);
+    }
 
     return (
         <div className="trends">
@@ -14,7 +18,7 @@ const Trends = () => {
 
             {
                 trend.slice(0, 5).map(t => (
-                    <div className="trends__trend">
+                    <div className="trends__trend" key={randomId()}>
                         <div className="trends__trend__content">
                             <p className="trends__trend__content__flex__position">{t.position} <span className="trends__trend__content__position__span">&#183;</span> Tendencias</p>
                             <p className="trends__trend__content__hashtag">{t.hashtag}</p>

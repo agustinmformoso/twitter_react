@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef, useContext } from 'react'
 import { Button } from '..'
-import { UserContext } from '../../Store/userContext';
-import { TrendContext } from '../../Store/trendContext';
+import { UserContext } from '../../Store/userContext'
+import { TrendContext } from '../../Store/trendContext'
 import useDropdown from '../../Hooks/useDropdown'
+import { GLOBAL } from '../../Config/global'
 
 const SearchBar = () => {
     const [user, setUser] = useContext(UserContext)
@@ -36,7 +37,7 @@ const SearchBar = () => {
         return (
             <div className="searchbar__dropdown__hashtag-search">
                 <p className="searchbar__dropdown__hashtag-search__p">{trend.hashtag}</p>
-                {trend.isTrend && <span className="searchbar__dropdown__hashtag-search__span">Tendencias</span>}
+                {trend.isTrend && <span className="searchbar__dropdown__hashtag-search__span">{GLOBAL.SEARCHBAR.TRENDS}</span>}
             </div>
         )
     }
@@ -62,7 +63,7 @@ const SearchBar = () => {
                 <div className="searchbar__dropdown">
                     {
                         search === '' ?
-                        <p className="searchbar__dropdown__p">Intenta buscar personas, temas o palabras clave</p>
+                        <p className="searchbar__dropdown__p">{GLOBAL.SEARCHBAR.DROPTDOWN}</p>
                         : null
                     }
                     {
@@ -83,7 +84,7 @@ const SearchBar = () => {
                     </div>
                     {
                         search &&
-                        filteredAccounts ? <p className="searchbar__dropdown--go-to">Ir a @{search}</p>
+                        filteredAccounts ? <p className="searchbar__dropdown--go-to">{GLOBAL.SEARCHBAR.GO_TO}{search}</p>
                         : null
                     }
                 </div>

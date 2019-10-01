@@ -34,6 +34,11 @@
             &__button {
                 border-color: transparent;
                 background-color: transparent;
+
+                
+                &:focus {
+                    outline: none;
+                }
             }
             
             &__icons {
@@ -82,6 +87,10 @@
             &__button {
                 border-color: transparent;
                 background-color: transparent;
+
+                &:focus {
+                    outline: none;
+                }
 
                 &--twit {
                     cursor: pointer;

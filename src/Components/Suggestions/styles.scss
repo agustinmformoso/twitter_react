@@ -81,6 +81,10 @@
                         cursor: pointer;
                         @include all-ease();
                     }
+
+                    &:focus {
+                        outline: none;
+                    }         
                 }
             }
         }        

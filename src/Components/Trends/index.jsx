@@ -19,7 +19,7 @@ const Trends = () => {
                             <p className="trends__trend__content__flex__position">{t.position} <span className="trends__trend__content__position__span">&#183;</span> Tendencias</p>
                             <p className="trends__trend__content__hashtag">{t.hashtag}</p>
                             {t.tweets && (
-                                <p className="trends__trend__content__tweets">{t.tweets} Tweets</p>
+                                <p className="trends__trend__content__tweets">{t.tweets} {GLOBAL.TRENDS.TWEETS}</p>
                                 )
                             }
                         </div>
@@ -30,7 +30,7 @@ const Trends = () => {
                                 <span className="trends__trend__news__content__span">{t.description}</span>
                             </div>
                             <div className="trends__trend__news__image">
-                                <img className="trends__trend__news__image__img" src={t.url} alt={t.url} width={150} />
+                                <img className="trends__trend__news__image__img" src={t.url} alt={t.url} width={100} />
                             </div>
                         </div>
                         )}

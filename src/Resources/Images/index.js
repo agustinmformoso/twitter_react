@@ -1,2 +1,3 @@
 import ProfilePic from './profilepic.jpg';
-export { ProfilePic };
+import HeaderDropdownIcon from './highlight.png';
+export { ProfilePic, HeaderDropdownIcon };

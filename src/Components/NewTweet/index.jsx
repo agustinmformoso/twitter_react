@@ -17,15 +17,15 @@ const NewTweet = () => {
             </div>
             <div className="newtweet__bottom">
                 <div className="newtweet__bottom__left">
-                    <Button className="newtweet__bottom__left__button" icon={<i className="far fa-image newtweet__bottom__left__icons"></i>} />
-                    <Button className="newtweet__bottom__left__button" icon={<i className="fas fa-image newtweet__bottom__left__icons"></i>} />
-                    <Button className="newtweet__bottom__left__button" icon={<i className="fas fa-poll-h newtweet__bottom__left__icons"></i>} />
-                    <Button className="newtweet__bottom__left__button" icon={<i className="far fa-smile newtweet__bottom__left__icons"></i>} />
+                    <Button className="newtweet__bottom__left__button" src="" imgClassname="far fa-image newtweet__bottom__left__icons" />
+                    <Button className="newtweet__bottom__left__button" src="" imgClassname="fas fa-image newtweet__bottom__left__icons" />
+                    <Button className="newtweet__bottom__left__button" src="" imgClassname="fas fa-poll-h newtweet__bottom__left__icons" />
+                    <Button className="newtweet__bottom__left__button" src="" imgClassname="far fa-smile newtweet__bottom__left__icons" />
                 </div>
                 <div className="newtweet__bottom__right">
                     <i className="far fa-circle newtweet__bottom__right__icons newtweet__bottom__right__icons--circle"></i>
                     <span className="newtweet__bottom__right__span">|</span>
-                    <Button className="newtweet__bottom__right__button" icon={<i className="fas fa-plus-circle newtweet__bottom__right__icons newtweet__bottom__right__icons--plus"></i>} />
+                    <Button className="newtweet__bottom__right__button" src="" imgClassname="fas fa-plus-circle newtweet__bottom__right__icons newtweet__bottom__right__icons--plus" />
                     <Button className="newtweet__bottom__right__button newtweet__bottom__right__button--twit" description={GLOBAL.SIDEBAR.BUTTON_TWIT} />
                 </div>
             </div>

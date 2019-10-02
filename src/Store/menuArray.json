@@ -1,0 +1,64 @@
+{
+    "menu": [
+      {
+        "className": "sidebar__box__button",
+        "description": "",
+        "src": "",
+        "imgClassname": "fab fa-twitter sidebar__box__button__icon sidebar__box__button__icon--twitter"
+      },
+      {
+        "className": "sidebar__box__button sidebar__box__button--active",
+        "description": "{GLOBAL.SIDEBAR.BUTTON_HOME}",
+        "src": "",
+        "imgClassname": "fas fa-home sidebar__box__button__icon"
+      },
+      {
+        "className": "sidebar__box__button",
+        "description": "{GLOBAL.SIDEBAR.BUTTON_EXPLORE}",
+        "src": "",
+        "imgClassname": "fas fa-hashtag sidebar__box__button__icon"
+      },
+      {
+        "className": "sidebar__box__button",
+        "description": "",
+        "src": "",
+        "imgClassname": "fab fa-twitter sidebar__box__button__icon sidebar__box__button__icon--twitter"
+      },
+      {
+        "className": "sidebar__box__button",
+        "description": "",
+        "src": "",
+        "imgClassname": "fab fa-twitter sidebar__box__button__icon sidebar__box__button__icon--twitter"
+      },
+      {
+        "className": "sidebar__box__button",
+        "description": "",
+        "src": "",
+        "imgClassname": "fab fa-twitter sidebar__box__button__icon sidebar__box__button__icon--twitter"
+      },
+      {
+        "className": "sidebar__box__button",
+        "description": "",
+        "src": "",
+        "imgClassname": "fab fa-twitter sidebar__box__button__icon sidebar__box__button__icon--twitter"
+      },
+      {
+        "className": "sidebar__box__button",
+        "description": "",
+        "src": "",
+        "imgClassname": "fab fa-twitter sidebar__box__button__icon sidebar__box__button__icon--twitter"
+      },
+      {
+        "className": "sidebar__box__button",
+        "description": "",
+        "src": "",
+        "imgClassname": "fab fa-twitter sidebar__box__button__icon sidebar__box__button__icon--twitter"
+      },
+      {
+        "className": "sidebar__box__button sidebar__box__button--twit",
+        "description": "",
+        "src": "",
+        "imgClassname": "fab fa-twitter sidebar__box__button__icon sidebar__box__button__icon--twitter"
+      }
+    ]
+  }

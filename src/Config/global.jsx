@@ -43,6 +43,14 @@ const GLOBAL = {
       TRENDS: "Tendencias",
       DROPTDOWN: "Intenta buscar personas, temas o palabras clave",
       GO_TO: "Ir a @"
+    },
+    TWEET: {
+      DROPDOWN_TWEET_IS_NOT_HELPFUL: "Mostrar con menos frecuencia",
+      DROPDOWN_EMBED_TWEET: "Tweet insertado",
+      DROPWDOWN_FOLLOW: "Seguir a",
+      DROPDOWN_MUTE: "Silenciar a",
+      DROPDOWN_BLOCK: "Bloquear a",
+      DROPDOWN_REPORT: "Denunciar el tweet"
     }
   };
   

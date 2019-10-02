@@ -26,10 +26,12 @@ const Tweet = ({ interaction, account, user, profile_picture, tweet, comments, r
                             open && (
                                 <div className="tweet__content__info__account__dropdown">
                                     <ul className="tweet__content__info__account__dropdown__ul">
-                                        <li className="tweet__content__info__account__dropdown__ul__li">hehe</li>
-                                        <li className="tweet__content__info__account__dropdown__ul__li">hehe</li>
-                                        <li className="tweet__content__info__account__dropdown__ul__li">hehehehe</li>
-                                        <li className="tweet__content__info__account__dropdown__ul__li">hehe</li>
+                                        <li className="tweet__content__info__account__dropdown__ul__li"><i className="far fa-frown tweet__content__info__account__dropdown__ul__li__i"></i> This Tweet's not helpful</li>
+                                        <li className="tweet__content__info__account__dropdown__ul__li"><i className="fas fa-code tweet__content__info__account__dropdown__ul__li__i"></i> Embed Tweet</li>
+                                        <li className="tweet__content__info__account__dropdown__ul__li"><i className="fas fa-user-plus tweet__content__info__account__dropdown__ul__li__i"></i> Follow {user}</li>
+                                        <li className="tweet__content__info__account__dropdown__ul__li"><i className="fas fa-volume-mute tweet__content__info__account__dropdown__ul__li__i"></i> Mute {user}</li>
+                                        <li className="tweet__content__info__account__dropdown__ul__li"><i className="fas fa-ban tweet__content__info__account__dropdown__ul__li__i"></i> Block {user}</li>
+                                        <li className="tweet__content__info__account__dropdown__ul__li"><i className="far fa-flag tweet__content__info__account__dropdown__ul__li__i"></i> Report Tweet</li>
                                     </ul>
                                 </div>
                             )}

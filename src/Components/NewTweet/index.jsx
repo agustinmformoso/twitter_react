@@ -1,5 +1,4 @@
 import React from 'react';
-import { ProfilePic } from '../../Resources/Images/index';
 import { Button, Textarea } from '../index'
 import { GLOBAL } from '../../Config/global';
 
@@ -12,7 +11,7 @@ const NewTweet = () => {
     return (
         <div className="newtweet">
             <div className="newtweet__header">
-                <img src={ProfilePic} alt={ProfilePic} className="newtweet__header__pic" />
+                <img src="https://pbs.twimg.com/profile_images/1158855492665577479/T6nP2Wrl_200x200.jpg" alt="profilePic" className="newtweet__header__pic" />
                 <Textarea handleKeyDown={(e) => handleKey(e)} handleKeyUp={(e) => handleKey(e)} type="text" name="newtweet" className="newtweet__header__textarea" placeholder="¿Qué está pasando?" />
             </div>
             <div className="newtweet__bottom">

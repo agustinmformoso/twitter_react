@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import { GLOBAL } from '../../Config/global';
 import { HeaderDropdownIcon } from '../../Resources/Images/index';
 import useDropdown from '../../Hooks/useDropdown'
@@ -12,7 +12,7 @@ const Header = () => {
                 {GLOBAL.HEADER.HEADER_HOME}
             </span>
             <span className="header__icon" ref={node} onClick={(e) => setOpen(!open)}>
-                <i class="far fa-star"></i>
+                <i className="far fa-star"></i>
             </span>
             {open && (<div className="header__dropdown">
                 <div className="header__dropdown__top">

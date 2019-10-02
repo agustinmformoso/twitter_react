@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Button } from '..'
+import { FollowSuggestion } from '..'
 import { GLOBAL } from '../../Config/global'
 import { UserContext } from '../../Store/userContext';
 
@@ -9,6 +9,12 @@ const Suggestions = () => {
         return '_' + Math.random().toString(36).substr(2, 9);
     }
 
+    const renderSuggestions = (user) => {
+        return (
+            <FollowSuggestion user={user} key={randomId()} />
+        )
+    }
+
     return (
         <div className="suggestions">
             <div className="suggestions__title">
@@ -16,20 +22,7 @@ const Suggestions = () => {
             </div>
             {
                 user.slice(0, 3).map(u => (
-                    <div className="suggestions__follow-suggestion" key={randomId()}>
-                        <div className="suggestions__follow-suggestion__profile-picture">
-                            <img className="suggestions__follow-suggestion__profile-picture__img" src={u.url} alt={u.url} width="50" />
-                        </div>
-                        <div className="suggestions__follow-suggestion__flex">
-                            <div className="suggestions__follow-suggestion__flex__account">
-                                <p className="suggestions__follow-suggestion__flex__account__p">{u.name}</p>
-                                <span className="suggestions__follow-suggestion__flex__account__span">{u.account}</span>
-                            </div>
-                            <div className="suggestions__follow-suggestion__flex__follow">
-                                <Button className="suggestions__follow-suggestion__flex__follow__button" description="Seguir" />
-                            </div>
-                        </div>
-                    </div>
+                    renderSuggestions(u)
                 ))
             }
             <div className="suggestions__show-more">

@@ -1,7 +1,8 @@
 import React from 'react'
 import { SearchBar, Suggestions, Trends, Sidebar, Footer, Header, NewTweet, Timeline } from '../../Components'
-import { UserProvider } from '../../Store/userContext';
-import { TrendProvider } from '../../Store/trendContext';
+import { UserProvider } from '../../Store/userContext'
+import { TrendProvider } from '../../Store/trendContext'
+import { tweets } from '../../Mock/data'
 
 const Home = () => {
     return (
@@ -14,7 +15,7 @@ const Home = () => {
                     <div className="home__col home__col--center">
                         <Header />
                         <NewTweet />
-                        <Timeline />
+                        <Timeline tweets={tweets} />
                     </div>
                     <div className="home__col home__col--right">
                         <SearchBar />

@@ -2,7 +2,7 @@ import React from 'react'
 import { SearchBar, Suggestions, Trends, Sidebar, Footer, Header, NewTweet, Timeline } from '../../Components'
 import { UserProvider } from '../../Store/userContext'
 import { TrendProvider } from '../../Store/trendContext'
-import { tweets } from '../../Mock/data'
+import { tweets, menuArray } from '../../Mock/data'
 
 const Home = () => {
     return (
@@ -10,7 +10,7 @@ const Home = () => {
             <TrendProvider>
                 <div className="home">
                     <div className="home__col home__col--left">
-                        <Sidebar />
+                        <Sidebar array={menuArray} />
                     </div>
                     <div className="home__col home__col--center">
                         <Header />

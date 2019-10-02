@@ -1,36 +1,20 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import { GLOBAL } from '../../Config/global';
 import { HeaderDropdownIcon } from '../../Resources/Images/index';
+import useDropdown from '../../Hooks/useDropdown'
 
 const Header = () => {
-    const node = useRef()
-    const [dropdown, setDropdown] = useState(false);
-
-    const handleClick = (e) => {
-        if (node.current.contains(e.target)) {
-            return;
-        }
-        setDropdown(false)
-    }
-
-    useEffect(() => {
-        document.addEventListener("click", handleClick);
-
-        return () => {
-            document.removeEventListener("click", handleClick);
-
-        }
-    }, [])
+    const { node, open, setOpen } = useDropdown();
 
     return (
         <div className="header">
             <span className="header__text">
                 {GLOBAL.HEADER.HEADER_HOME}
             </span>
-            <span className="header__icon" ref={node} onClick={() => setDropdown(!dropdown)}>
+            <span className="header__icon" ref={node} onClick={(e) => setOpen(!open)}>
                 <i className="far fa-star"></i>
                 {
-                dropdown && (<div className="header__dropdown">
+                open && (<div className="header__dropdown">
                     <div className="header__dropdown__top">
                         <img className="header__dropdown__top__img" src={HeaderDropdownIcon} alt="" />
                         <h3 className="header__dropdown__top__title">{GLOBAL.HEADER.DROPDOWN_TOP}</h3>

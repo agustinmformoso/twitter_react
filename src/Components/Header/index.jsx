@@ -21,7 +21,7 @@ const Header = () => {
                 </div>
                 <div className="header__dropdown__bottom">
                     <span className="header__dropdown__bottom__span">
-                        <i class="fas fa-exchange-alt header__dropdown__bottom__span__icon"></i>
+                        <i className="fas fa-exchange-alt header__dropdown__bottom__span__icon"></i>
                         <div>
                             <p className="header__dropdown__bottom__span__p">{GLOBAL.HEADER.DROPDOWN_SPAN_1}</p>
                             <p className="header__dropdown__bottom__span__info">{GLOBAL.HEADER.DROPDOWN_SPAN_1_INFO}</p>

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React from 'react'
 import { GLOBAL } from '../../Config/global'
 import useDropdown from '../../Hooks/useDropdown'
 
@@ -11,7 +11,7 @@ const Footer = () => {
             <a className="footer__a" href="#!">{GLOBAL.FOOTER.PRIVACY_POLICY}</a>
             <a className="footer__a" href="#!">{GLOBAL.FOOTER.COOKIES}</a>
             <a className="footer__a" href="#!">{GLOBAL.FOOTER.ADS_INFO}</a>
-            <a className="footer__a" ref={node} onClick={(e) => setOpen(!open)} href="#!">{GLOBAL.FOOTER.MORE} <i class="fas fa-chevron-down"></i></a>
+            <a className="footer__a" ref={node} onClick={(e) => setOpen(!open)} href="#!">{GLOBAL.FOOTER.MORE} <i className="fas fa-chevron-down"></i></a>
             {
                 open && (
                 <div className="footer__dropdown">

@@ -4,7 +4,10 @@ import { GLOBAL } from '../../Config/global'
 import { UserContext } from '../../Store/userContext';
 
 const Suggestions = () => {
-    const [user, setUser] = useContext(UserContext)
+    const [ user ] = useContext(UserContext)
+    const randomId = () => {
+        return '_' + Math.random().toString(36).substr(2, 9);
+    }
 
     return (
         <div className="suggestions">
@@ -13,7 +16,7 @@ const Suggestions = () => {
             </div>
             {
                 user.slice(0, 3).map(u => (
-                    <div className="suggestions__follow-suggestion">
+                    <div className="suggestions__follow-suggestion" key={randomId()}>
                         <div className="suggestions__follow-suggestion__profile-picture">
                             <img className="suggestions__follow-suggestion__profile-picture__img" src={u.url} alt={u.url} width="50" />
                         </div>

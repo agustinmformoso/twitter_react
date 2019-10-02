@@ -2,14 +2,16 @@ import React from 'react'
 import { SearchBar, Suggestions, Trends, Sidebar, Footer, Header, NewTweet, Timeline } from '../../Components'
 import { UserProvider } from '../../Store/userContext';
 import { TrendProvider } from '../../Store/trendContext';
+import menuArray from '../../Store/menuArray.json'
 
 const Home = () => {
+
     return (
         <UserProvider>
             <TrendProvider>
                 <div className="home">
                     <div className="home__col home__col--left">
-                        <Sidebar />
+                        <Sidebar array={menuArray} />
                     </div>
                     <div className="home__col home__col--center">
                         <Header />

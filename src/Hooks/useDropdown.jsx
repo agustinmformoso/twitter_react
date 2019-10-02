@@ -23,8 +23,6 @@ const useDropdown = () => {
         }
     }, [])
 
-    console.log(isActive)
-
     return {
         node,
         open,

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import { Button } from '..'
 import { UserContext } from '../../Store/userContext'
 import { TrendContext } from '../../Store/trendContext'
@@ -6,8 +6,8 @@ import useDropdown from '../../Hooks/useDropdown'
 import { GLOBAL } from '../../Config/global'
 
 const SearchBar = () => {
-    const [user, setUser] = useContext(UserContext)
-    const [trend, setTrend] = useContext(TrendContext)
+    const [ user ] = useContext(UserContext)
+    const [ trend ] = useContext(TrendContext)
     const [search, setSearch] = useState('')
     const { node, open, setOpen, isActive } = useDropdown()
     
@@ -21,7 +21,7 @@ const SearchBar = () => {
 
     const renderAccounts = (user) => {
         return (
-            <div className="searchbar__dropdown__accounts-container__account-search">
+            <div className="searchbar__dropdown__accounts-container__account-search" key={randomId()}>
                 <div className="searchbar__dropdown__accounts-container__account-search__profile-picture">
                     <img className="searchbar__dropdown__accounts-container__account-search__profile-picture__img" src={user.url} alt={user.url} width={50} />
                 </div>
@@ -35,7 +35,7 @@ const SearchBar = () => {
 
     const renderHashtags = (trend) => {
         return (
-            <div className="searchbar__dropdown__hashtag-search">
+            <div className="searchbar__dropdown__hashtag-search" key={randomId()}>
                 <p className="searchbar__dropdown__hashtag-search__p">{trend.hashtag}</p>
                 {trend.isTrend && <span className="searchbar__dropdown__hashtag-search__span">{GLOBAL.SEARCHBAR.TRENDS}</span>}
             </div>
@@ -49,6 +49,10 @@ const SearchBar = () => {
     const filteredTrends = trend.filter(i => {
         return i.hashtag.toLowerCase().indexOf(search.toLowerCase()) !== -1;
     })
+
+    const randomId = () => {
+        return '_' + Math.random().toString(36).substr(2, 9);
+    }
 
     return (
         <div ref={node} className="searchbar">

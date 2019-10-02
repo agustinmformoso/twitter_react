@@ -1,5 +1,5 @@
-{
-    "menu": [
+{ 
+  "menuArray": [
       {
         "className": "sidebar__box__button",
         "description": "",
@@ -20,45 +20,45 @@
       },
       {
         "className": "sidebar__box__button",
-        "description": "",
+        "description": "{GLOBAL.SIDEBAR.BUTTON_NOTIF}",
         "src": "",
-        "imgClassname": "fab fa-twitter sidebar__box__button__icon sidebar__box__button__icon--twitter"
+        "imgClassname": "far fa-bell sidebar__box__button__icon"
       },
       {
         "className": "sidebar__box__button",
-        "description": "",
+        "description": "{GLOBAL.SIDEBAR.BUTTON_DM}",
         "src": "",
-        "imgClassname": "fab fa-twitter sidebar__box__button__icon sidebar__box__button__icon--twitter"
+        "imgClassname": "far fa-envelope sidebar__box__button__icon"
       },
       {
         "className": "sidebar__box__button",
-        "description": "",
+        "description": "{GLOBAL.SIDEBAR.BUTTON_SAVED}",
         "src": "",
-        "imgClassname": "fab fa-twitter sidebar__box__button__icon sidebar__box__button__icon--twitter"
+        "imgClassname": "far fa-bookmark sidebar__box__button__icon"
       },
       {
         "className": "sidebar__box__button",
-        "description": "",
+        "description": "{GLOBAL.SIDEBAR.BUTTON_LISTS}",
         "src": "",
-        "imgClassname": "fab fa-twitter sidebar__box__button__icon sidebar__box__button__icon--twitter"
+        "imgClassname": "far fa-list-alt sidebar__box__button__icon"
       },
       {
         "className": "sidebar__box__button",
-        "description": "",
-        "src": "",
-        "imgClassname": "fab fa-twitter sidebar__box__button__icon sidebar__box__button__icon--twitter"
+        "description": "{GLOBAL.SIDEBAR.BUTTON_PROFILE}",
+        "src": "{ProfilePic}",
+        "imgClassname": "sidebar__box__button__icon sidebar__box__button__icon--profile"
       },
       {
         "className": "sidebar__box__button",
-        "description": "",
+        "description": "{GLOBAL.SIDEBAR.BUTTON_OPTIONS}",
         "src": "",
-        "imgClassname": "fab fa-twitter sidebar__box__button__icon sidebar__box__button__icon--twitter"
+        "imgClassname": "fas fa-ellipsis-h sidebar__box__button__icon"
       },
       {
         "className": "sidebar__box__button sidebar__box__button--twit",
-        "description": "",
+        "description": "{GLOBAL.SIDEBAR.BUTTON_TWIT}",
         "src": "",
-        "imgClassname": "fab fa-twitter sidebar__box__button__icon sidebar__box__button__icon--twitter"
+        "imgClassname": ""
       }
     ]
   }

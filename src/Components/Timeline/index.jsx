@@ -2,7 +2,6 @@ import React from 'react'
 import { Tweet } from '..'
 
 const Timeline = ({ tweets }) => {
-    console.log(tweets)
     return (
         <div className="timeline">
             {

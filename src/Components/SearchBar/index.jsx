@@ -1,9 +1,10 @@
 import React, { useState, useContext } from 'react'
-import { Button } from '..'
+import { Button, SearchAccounts } from '..'
 import { UserContext } from '../../Store/userContext'
 import { TrendContext } from '../../Store/trendContext'
 import useDropdown from '../../Hooks/useDropdown'
 import { GLOBAL } from '../../Config/global'
+import SearchHashtags from '../SearchHashtags'
 
 const SearchBar = () => {
     const [ user ] = useContext(UserContext)
@@ -19,26 +20,19 @@ const SearchBar = () => {
         setSearch('')
     }
 
+    const randomId = () => {
+        return '_' + Math.random().toString(36).substr(2, 9);
+    }
+
     const renderAccounts = (user) => {
         return (
-            <div className="searchbar__dropdown__accounts-container__account-search" key={randomId()}>
-                <div className="searchbar__dropdown__accounts-container__account-search__profile-picture">
-                    <img className="searchbar__dropdown__accounts-container__account-search__profile-picture__img" src={user.url} alt={user.url} width={50} />
-                </div>
-                <div className="searchbar__dropdown__accounts-container__account-search__account">
-                    <span className="searchbar__dropdown__accounts-container__account-search__account__span">{user.name.substring(0, 20)}</span>
-                    <p className="searchbar__dropdown__accounts-container__account-search__account__p">{user.account}</p>
-                </div>
-            </div>
+            <SearchAccounts user={user} key={randomId()} />
         )
     }
 
     const renderHashtags = (trend) => {
         return (
-            <div className="searchbar__dropdown__hashtag-search" key={randomId()}>
-                <p className="searchbar__dropdown__hashtag-search__p">{trend.hashtag}</p>
-                {trend.isTrend && <span className="searchbar__dropdown__hashtag-search__span">{GLOBAL.SEARCHBAR.TRENDS}</span>}
-            </div>
+            <SearchHashtags trend={trend} key={randomId()} />
         )
     }
 
@@ -49,10 +43,6 @@ const SearchBar = () => {
     const filteredTrends = trend.filter(i => {
         return i.hashtag.toLowerCase().indexOf(search.toLowerCase()) !== -1;
     })
-
-    const randomId = () => {
-        return '_' + Math.random().toString(36).substr(2, 9);
-    }
 
     return (
         <div ref={node} className="searchbar">

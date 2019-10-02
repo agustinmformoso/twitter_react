@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { TrendContext } from '../../Store/trendContext';
 import { GLOBAL } from '../../Config/global'
+import { Trend } from '..'
 
 const Trends = () => {
     const [ trend ] = useContext(TrendContext)
@@ -18,27 +19,16 @@ const Trends = () => {
 
             {
                 trend.slice(0, 5).map(t => (
-                    <div className="trends__trend" key={randomId()}>
-                        <div className="trends__trend__content">
-                            <p className="trends__trend__content__flex__position">{t.position} <span className="trends__trend__content__position__span">&#183;</span> Tendencias</p>
-                            <p className="trends__trend__content__hashtag">{t.hashtag}</p>
-                            {t.tweets && (
-                                <p className="trends__trend__content__tweets">{t.tweets} {GLOBAL.TRENDS.TWEETS}</p>
-                                )
-                            }
-                        </div>
-                        {t.isNews && (
-                        <div className="trends__trend__news">
-                            <div className="trends__trend__news__content">
-                                <p className="trends__trend__news__content__p">{t.country}</p>
-                                <span className="trends__trend__news__content__span">{t.description}</span>
-                            </div>
-                            <div className="trends__trend__news__image">
-                                <img className="trends__trend__news__image__img" src={t.url} alt={t.url} width={100} />
-                            </div>
-                        </div>
-                        )}
-                    </div>
+                    <Trend
+                        key={randomId()}
+                        position={t.position}
+                        hashtag={t.hashtag}
+                        tweets={t.tweets}
+                        country={t.country}
+                        description={t.description}
+                        url={t.url}
+                        isNews={t.isNews}
+                    />
                 ))
             }
 

@@ -36,7 +36,8 @@ const GLOBAL = {
     TRENDS: {
       TRENDS_FOR_YOU: "Tendencias de Buenos Aires",
       SHOW_MORE: "Mostrar más",
-      TWEETS: "Tweets"
+      TWEETS: "Tweets",
+      TRENDS: "Tendencias"
     },
     SEARCHBAR: {
       TRENDS: "Tendencias",
